@@ -81,13 +81,13 @@ if (!fechaNacimiento.value) {
             password: clave.value,
             birthdate: fechaNacimiento.value,
             country: document.getElementById("country").value
-        };
+        }
 
         // Guardar en localStorage
-        localStorage.setItem('formData', JSON.stringify(formData));
+        localStorage.setItem('formData', JSON.stringify(formData))
         
         // Redireccionar o hacer cualquier acción adicional
-        // window.location.href = '../index.html'
+        window.location.href = '../index.html'
     }
 
     return validation;
