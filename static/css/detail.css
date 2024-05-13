@@ -1,0 +1,91 @@
+
+#banner-movie{
+    background-image: url('../img/mario-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    box-shadow:inset 0 0 0 2000px rgba(84, 84, 84, 0.7);
+}
+
+/* 
+inset: Es un valor opcional que indica que la sombra debe estar en el interior del elemento en lugar de en el exterior. Si se incluye este valor, la sombra se dibujará dentro del contorno del elemento en lugar de fuera de él.
+0 0: Estos dos valores representan el desplazamiento horizontal y vertical de la sombra. En este caso, la sombra no se desplaza horizontal ni verticalmente, por lo que no hay desplazamiento.
+
+0: Este valor representa el radio de desenfoque de la sombra. En este caso, la sombra no está desenfocada, ya que el radio de desenfoque es 0.
+
+2000px: Este valor representa el radio de propagación de la sombra. En este caso, la sombra se extiende 2000 píxeles desde el contorno del elemento.
+
+rgba(84, 84, 84, 0.7): Este valor define el color de la sombra. Especifica un color gris con una opacidad del 70%.
+*/
+
+
+/* diseño de la primer seccion */
+
+.movie-detail {
+    border: 4px solid black;
+    display: flex;
+    gap: 20px;
+}
+
+.movie-detail-poster{
+    border: 4px solid red;
+
+    min-width: 300px;
+    /* display: flex;
+    justify-content: center; */
+}
+
+.movie-detail-poster img{
+    border-radius: 20px;
+    width: 300px;
+}
+
+.movie-detail-info{
+    border: 4px solid yellowgreen;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-gap: 5px;
+    padding: 30px;
+    color: white;
+
+
+}
+
+.movie-detail-info-title {
+    border: 4px solid white;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .movie-detail-info-title span {
+    font-size: 0.8rem;
+  }
+  
+  .movie-detail-info-overview {
+    border: 4px solid black;
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .movie-detail-info-credits {
+    border: 2px solid black;
+}
+
+  .movie-detail-info-credits {
+    margin: 5px 0;
+    font-size: 0.9em;
+  }
+
+
+.publicidad {
+    border: 2px solid red;
+    background-color: aqua;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+
+}
+  

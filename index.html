@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CaC - Movies!</title>
+    <link rel="cac-movie icon" href="./static/img/favicon.ico" type="image/x-icon">
+
+     <!-- Fuentes de google -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+ 
+     <!-- Iconos de google -->
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+
+    <!-- iconos awesome -->
+    <script src="https://kit.fontawesome.com/883a12fdd2.js" crossorigin="anonymous"></script>
+     <!-- Estilos -->
+    <link rel="stylesheet" href="./static/css/styles.css">
+   
+</head>
+<body>
+    <!-- Navegacion y logo -->
+    
+    <header>
+        <nav>
+            <!-- logo y nombre sitio -->
+            <div id="logo">
+                <a href="./index.html">
+                    <!-- aqui icono de fontawesome -->
+                    <i class="fa-solid fa-film fa-spin"></i>
+                    <span class="logo-text"> 
+                        CaC - Pelis!!!!!!!!
+                    </span>
+                </a>
+            </div>    
+            <!-- menu de acciones -->
+
+            <ul>
+                <li> Tendencias </li>
+                <li>
+                    <!-- ruta relativa a mi archivo actual -->
+                    <a href="./templates/register.html">Registrarse</a>
+                </li>
+                <li>
+                    <a 
+                    href="https://developer.themoviedb.org/docs"
+                    target="_blank"
+                    title="Ir a la pagina que me dara las pelis para este hermoso frontend"
+                    class="primer-clase"
+                    >
+                    API
+                </a>
+                </li>
+                <!-- <li class="primer-clase">Iniciar sesion</li> -->
+                <li id="usuario">
+                    <a class="btn-primary" href="#">
+                        <!-- aqui icono de fontawesome -->
+                        <i class="fas fa-sign-in-alt"></i>
+                        <span class="login-text">
+                            Iniciar Sesión
+                        </span>    
+                    </a> 
+                </li>
+            </ul>
+        </nav>
+        <div class="comision">24180</div>
+
+    </header>
+    <!-- Mi parte principal -->
+    <main>
+        <!-- banner para publicidad o mostrar un buen poster y alguna info -->
+        <section id="banner">
+            <div class="banner-container">
+
+                <h1>Películas y series ilimitadas y mucho más.</h1>
+                <h3>
+                    Disfruta donde quieras. Cancela cuando quieras.
+                </h3>
+            </div>
+        </section>
+        <!-- busqueda de pelis en la plataforma -->
+        <section id="search" class="search-container">
+                <!-- agrego un span que es en linea para poder aplicar estilos -->
+                <h2> <i class="fa-solid fa-magnifying-glass fa-fade"></i><span>¿Qué estas buscando?</span></h2>
+                <input type="text" placeholder="Ingrese nombre de peli a buscar ..." >           
+        </section>
+        <!-- las tendencias -->
+        <section id="trending">
+            <h1 class="primer-clase">Las tendencias de hoy </h1>
+            <!-- NEW agregamos id="trending-list" -->
+            <div id="trending-list" class="grid-pelis">
+                <!-- Aqui se llenara de pelis con JS -->    
+            </div>
+
+
+        </section>
+        <!-- pelis destacadas -->
+        <section id="top-rated">
+            <h1>Las mas aclamadas</h1>
+        </section>
+        
+        
+    
+    </main>
+    <!-- El pie de pagina con info importante -->
+    <footer>
+
+        <a href="#">Terminos y condiciones</a>
+        <a href="#">Preguntas Frecuentes</a>
+        <a href="#">Ayuda</a>
+        <a href="#">Creditos</a>
+
+    </footer>
+    <script src="./static/js/generales.js"></script>
+    <script src="./static/js/listado.js"></script>
+</body>
+</html>
