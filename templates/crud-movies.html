@@ -9,13 +9,22 @@
 <body>
     <div class="container">
         <h1>Agregar Nueva Película</h1> <a href="../index.html">CaC - Movies</a>
-        <form id="movieForm">
+        <!-- 
+        enctype="multipart/form-data": Este atributo es esencial cuando el formulario incluye un 
+        campo de subida de archivos (<input type="file">). 
+        Permite que los archivos se envíen al servidor como datos binarios en lugar de solo texto.
+        -->
+        <form id="movieForm" enctype="multipart/form-data">
             <label for="title">Título</label>
-            <input type="text" id="title" name="title" required>
+            <input type="text" id="title" name="title" required value="Pelicula">
             
             <label for="release_year">Año de Lanzamiento</label>
-            <input type="number" id="release_year" name="release_year" required>
+            <input type="number" id="release_year" name="release_year" required value="1900">
             
+            <!-- El input tipo file permite elegir un archivo de mi disco -->
+            <label for="imagenPeli">Imagen de la peli:</label> 
+            <input type="file" id="imagenPeli" name="imagen">
+
             <label for="adult">Adulto</label>
             <input type="checkbox" id="adult" name="adult">
             
