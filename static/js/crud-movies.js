@@ -28,7 +28,7 @@ formData.append('release_year',release_year)
 formData.append('adult',adult)
 formData.append('imagen',imagen)
 
-  fetch(`${API_MOVIES}/movies1`, {
+  fetch(`${API_MOVIES}/movies`, {
       method: 'POST',
       body: formData // Aquí enviamos formData en lugar de JSON
   })
