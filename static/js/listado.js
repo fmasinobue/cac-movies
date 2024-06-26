@@ -42,9 +42,9 @@ const obtenerPelis = async () => {
         // Insertar el HTML de la película en el contenedor
         divTrending.insertAdjacentHTML('beforeend', PeliAInsertar)
     }
-    // if (pelis.length === 0) {
-    //     divTrending.insertAdjacentHTML('beforeend', "<p>No hay pelicualas en el sistema 😮</p>")
-    // }
+    if (pelis.length === 0) {
+        divTrending.insertAdjacentHTML('beforeend', "<p>No hay peliculas en el sistema 😮</p>")
+    }
 }
 
 
