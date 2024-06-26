@@ -1,4 +1,5 @@
-
+// const API_MOVIES = 'https://api.themoviedb.org/3/movie/popular'
+// const API_MOVIES = 'http://localhost:5000/movies'
 import { API_MOVIES } from './config.js'
 
 
@@ -6,7 +7,9 @@ import { API_MOVIES } from './config.js'
 const options = {
     method: 'GET',
     headers: {
-        accept: 'application/json'    }
+        accept: 'application/json',
+        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2MTI2ZDgzMDU2NjMzNmJhNmU4Mzc2NGIyZjZiZmI2MSIsInN1YiI6IjY1Y2U2NDA0MTNhMzg4MDE4NzlmNjBmOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.tZTxSjr1fLqIi2LSwadmPT37grY2IF6y3d4LUHLbEmE'
+    }
 }
 
 const obtenerPelis = async () => {
@@ -37,9 +40,39 @@ const obtenerPelis = async () => {
         `
 
         // Insertar el HTML de la película en el contenedor
-        divTrending.insertAdjacentHTML('beforeend', PeliAInsertar);
+        divTrending.insertAdjacentHTML('beforeend', PeliAInsertar)
     }
+    // if (pelis.length === 0) {
+    //     divTrending.insertAdjacentHTML('beforeend', "<p>No hay pelicualas en el sistema 😮</p>")
+    // }
 }
 
 
 obtenerPelis()
+
+/*
+const agregarPeli = async (newMovie) => {
+    const response = await fetch(API_MOVIES, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            accept: 'application/json',
+            
+        },
+        body: JSON.stringify(newMovie)
+    });
+
+    const data = await response.json();
+    console.log('New Movie Added:', data);
+};
+
+// Ejemplo de cómo llamar a agregarPeli con una nueva película
+const nuevaPeli = {
+    id:120,
+    title: "Test",
+    release_year: 2010,
+    adult: false
+};
+
+agregarPeli(nuevaPeli); // Llama para agregar una nueva película
+*/

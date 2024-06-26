@@ -4,7 +4,6 @@ body {
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
-    align-items: center;
     height: 100vh;
     margin: 0;
 }
@@ -48,4 +47,34 @@ button:hover {
 
 #message {
     margin-top: 20px;
+}
+
+
+/* Nuevos estilos para el listado de películas */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: #333333;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li button {
+    background-color: #d32f2f;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+li button:hover {
+    background-color: #b71c1c;
 }
